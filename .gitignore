@@ -1,0 +1,21 @@
+# Compiled binaries
+*.exe
+*.out
+*.obj
+*.o
+*.dll
+*.so
+
+# Editor/temp files
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Local runner artifacts
+**/tempCodeRunnerFile*
+**/*.stackdump
+
+# OS generated files
+Desktop.ini

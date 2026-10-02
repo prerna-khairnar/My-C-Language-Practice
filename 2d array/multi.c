@@ -1,0 +1,77 @@
+#include <stdio.h>
+int main()
+{
+    int arr[3][3];
+    int b[3][3];
+    int d[3][3];
+
+    printf("enter 1st matrix :");
+    for (int r = 0; r < 3; r++)
+    {
+        // printf("enter the %d row element:", r + 1);
+        for (int c = 0; c < 3; c++)
+        {
+            scanf("%d", &arr[r][c]);
+        }
+    }
+
+    printf("enter 2nd matrix :");
+    for (int r = 0; r < 3; r++)
+    {
+        // printf("enter the %d row element:", r + 1);
+        for (int c = 0; c < 3; c++)
+        {
+            scanf("%d", &b[r][c]);
+        }
+    }
+
+    printf("output 1st matrix is:\n");
+    for (int r = 0; r < 3; r++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            printf("%d ", arr[r][c]);
+        }
+        printf("\n");
+    }
+
+    printf("output 2nd matrix is:\n");
+    for (int r = 0; r < 3; r++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            printf("%d ", b[r][c]);
+        }
+        printf("\n");
+    }
+
+    // initialize 3rd array as 0
+    for (int r = 0; r < 3; r++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            d[r][c] = 0;
+        }
+    }
+
+    printf("output of matrix multiplication is:\n");
+    for (int r = 0; r < 3; r++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            for (int k = 0; k < 3; k++)
+            {
+                d[r][c] += arr[r][k] * b[k][c];
+            }
+        }
+    }
+
+    for (int r = 0; r < 3; r++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            printf("%d ", d[r][c]);
+        }
+        printf("\n");
+    }
+}
